@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: blood-insights-api
+    env: python
+    buildCommand: pip install -r flask-backend/requirements.txt
+    startCommand: cd flask-backend && python main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.0
+      - key: PORT
+        value: 5000
