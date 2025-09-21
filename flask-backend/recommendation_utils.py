@@ -8,7 +8,8 @@ import threading
 # Load model once
 pipe = pipeline(
     "text-generation",
-    model="mistralai/Mistral-7B-Instruct-v0.2"
+    model="google/flan-t5-small",  # Using a smaller model that can run on CPU
+    device="cpu"  # Explicitly use CPU
 )
 
 logging.basicConfig(level=logging.INFO)
@@ -68,17 +69,16 @@ def generate_diet_recommendations(input_data):
             future = executor.submit(
                 pipe,
                 prompt,
-                max_new_tokens=200,  # Reduced from 300 for faster generation
+                max_length=200,  # Set maximum length for T5 model
                 do_sample=True,
-                temperature=0.5,     # Reduced for more focused outputs
-                top_k=50,           # Limit vocabulary for faster generation
-                top_p=0.9,          # Nucleus sampling for efficiency
-                return_full_text=False
+                temperature=0.7,
+                num_return_sequences=1
             )
-           
+            result = future.result()
 
-        if result and isinstance(result, list) and 'generated_text' in result[0]:
-            generated = result[0]['generated_text'].strip()
+        if result and len(result) > 0:
+            generated = result[0]['generated_text'] if isinstance(result[0], dict) else result[0]
+            generated = str(generated).strip()
             generated += "\n\nDisclaimer: This is an AI-generated report. Please consult a doctor for professional advice."
             return generated
         else:

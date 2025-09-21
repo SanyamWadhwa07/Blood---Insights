@@ -1,0 +1,1 @@
+export const API_URL = 'https://blood-insights-2.onrender.com';
