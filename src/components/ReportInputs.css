@@ -1,0 +1,54 @@
+.reportBox{
+    background-color: #b4bef8cf;
+    height: 20vh;
+    width: 8vw;
+    text-align: center;
+    position: relative;
+}
+
+h4{
+    /* padding-top: 43px; */
+    padding-top: 30px;
+}
+
+.reportCheckbox{
+    position: relative;
+    top: 2px;
+}
+
+h4 span{
+    margin-left: 5px;
+    font-size: 0.83rem;
+}
+
+.inputBox{
+    width: 80%;
+    /* margin-top: 21px; */
+    position: absolute;
+    bottom: 10px;
+    left: 2px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 2px solid white;
+    height: 2em;
+    margin: 4px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1024px){
+    h4 span{
+        font-size: 0.63rem;
+    }
+    .inputBox{
+        margin-top: 15px;
+    }
+    h4{
+        padding-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    h4 span{
+        font-size: 0.6rem;
+    }
+}

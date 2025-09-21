@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Halant:wght@300;400;500;600;700&family=Kaisei+HarunoUmi&display=swap');
+
+.container {
+    height: 123vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #b4bdf5;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 30px;
+    font-family: 'Kaisei HarunoUmi', serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28.96px;
+    text-align: center;
+}
+
+.name {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 38.25px;
+    text-align: center;
+    margin-top: -15px;
+}
+
+.companyLogoContainer {
+    margin: 10%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo-section {
+    margin-top: 50px;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100%;
+  padding: 0 20px; /* Adjust padding as needed */
+}
+
+.company-logo {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.company-name {
+    font-size: 130px;
+    font-weight: 400;
+    line-height: 1;
+    color: #182d76;
+    font-family: 'Audiowide', sans-serif;
+    z-index: 1;
+}
+
+.centered-content {
+  text-align: center;
+}
+
+.promo-text {
+    font-size: 3rem;
+    color: #1d346e;
+    z-index: 1;
+    font-family: 'Halant', serif;
+    font-weight: 400;
+    
+
+}
+
+.bgImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  height: 80%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.bg {
+    height: auto;
+    width: 100%;
+    opacity: 0.3;
+    object-fit: cover;
+}
+
+@media (max-width: 1600px) {
+   
+  .company-name {
+      font-size: 130px;
+  }
+
+  .promo-text {
+      font-size: 2.5rem;
+  }
+
+  .bg{
+    padding-top: 10%;
+  }
+}
+
+@media (max-width: 1350px) {
+   
+    .company-name {
+        font-size: 110px;
+    }
+
+    .promo-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1100px) {
+   
+  .company-name {
+      font-size: 100px;
+      padding-top: 5%;
+  }
+
+  .promo-text {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 15px;
+    }
+    .name {
+      font-size: 25px;
+    }
+    .company-name {
+        font-size: 6rem;
+    }
+
+    .promo-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 520px) {
+
+  .header {
+    font-size: 10px;
+}
+ .name {
+  font-size: 15px;
+  
+}
+.two{
+  margin-top: -10px;
+}
+    .company-logo {
+        font-size: 32px;
+    }
+    
+    .company-name {
+        font-size: 4rem;
+    }
+
+    .promo-text {
+        font-size: 1.5rem;
+    }
+}

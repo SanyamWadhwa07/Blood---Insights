@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Roboto+Slab:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'Porter Sans Block';
+    src: url('D:/Evex/EvexFit_BloodReport/src/assets/porter-sans-inline-block.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+.mainReport {
+  background-color: #fff1e7;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainReport h1 {
+  margin: 35px;
+}
+
+.mainReport p {
+  margin-bottom: 50px;
+}
+.boxes{
+  background-image: url("/public/reportbg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.inputBoxes {
+  /* background-color: aqua; */
+  
+  display: flex;
+  flex-direction: column;
+  filter: opacity(0.75);
+}
+.inputBoxesRow {
+  display: flex;
+  flex-direction: row;
+}
+.reportBox {
+  border: 2px solid #fff1e7;
+}
+
+.submit {
+  background-color: #b4bef8cf;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 2% 10%;
+  cursor: pointer;
+  margin-top: 20px; /* Add some spacing above the button */
+  border-radius: 50px;
+  font-family: Porter Sans Block;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+.overlay{
+  position: fixed;
+  display: none;
+  z-index: 999; 
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow-x: hidden;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  
+}
+.result{
+  /* position: fixed; */
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  border: 20px solid #b4bef8cf;
+  background-color: #fff1e7;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-around;
+  
+}
+.heading{
+  text-align: center;
+  padding: 20px;
+}
+.heading h1{
+  font-size: 70px;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.image{
+  background-image: url("/public/reportbg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  width: 80%;
+}
+.recommendations{
+  background-color: #b4bef8cf;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5em;
+  
+
+}
+@media only screen and (max-width: 1300px) {
+  .reportBox {
+    width: 13.5vw;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .reportBox {
+    width: 13vw;
+  }
+  .submit{
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .reportBox {
+    width: 30vw;
+    background-color: #d4d9f4;
+  }
+
+  /* .inputBoxes {
+    display: flex;
+    flex-direction: row;
+  } */
+   .boxes{
+    display: flex;
+    flex-direction: column;
+   }
+  .inputBoxesRow {
+    flex-direction: column;
+  }
+  /* .mainReport {
+    height: 190vh;
+  } */
+  .inputBoxes {
+    background-image: none;
+  }
+  .mainReport p {
+    margin-left: 14px;
+  }
+  .submit{
+    font-size: 20px;
+  }
+}

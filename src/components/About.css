@@ -1,0 +1,97 @@
+.aboutContainer {
+  /* background-color: #d4d9f4; */
+  height: 100vh;
+  /* position: fixed; */
+  /* width: 100%; */
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+
+  
+}
+.aboutHeading{
+  text-align: center;
+  padding-top: 20px;
+}
+.mainAboutContainer{
+  background-color: #d4d9f4;
+  height: 109vh;
+  /* position: fixed; */
+  background-image: url("/public/aboutbg2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-blend-mode: multiply; */
+}
+.leftAboutSection {
+  /* background-color: aqua; */
+  
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightAboutSection {
+  /* background-color: bisque; */
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightAboutContent {
+  background-color: white;
+    height: 60%;
+    width: 50%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.rightAboutContent p {
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+}
+
+
+
+@media only screen and (max-width: 1025px) {
+  .rightAboutContent{
+    width: 70%;
+  }
+    .rightAboutContent p{
+        font-size: 0.9rem;
+    }
+} 
+
+@media only screen and (max-width: 940px) {
+    .rightAboutContent{
+      height: 50%;
+      width: 80%;
+    }
+    .rightAboutContent p{
+        font-size: 0.9rem;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .rightAboutContent p{
+        font-size: 0.5rem;
+    }
+    .rightAboutContent{
+      height: 30%;
+      width: 80%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .rightAboutContent p{
+        font-size: 0.45rem;
+    }
+}
